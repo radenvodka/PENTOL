@@ -19,3 +19,14 @@ PENTOL - Pentester Toolkit is built as a plugin for the Fiddler HTTP debugging p
 - Press Key `CTRL` + `S`  for `Save`
 
 Check tools in `Rules TAB`
+
+## Credits
+
+- Thanks to allah
+- Eka Syahwan (Creator) [bugrecon](https:/bugrecon.or.id) / [H1](https://hackerone.com/radenvodka) / [bugcrowd](https://bugcrowd.com/radenvodka)
+- Edo Maland (Powerstager) https://github.com/Screetsec
+- Jack Wilder admin in http://www.linuxsec.org
+
+## Disclaimer
+Note: modifications, changes, or changes to this code can be accepted, however, every public release that uses this code must be approved by writing this tool (Eka S)
+
