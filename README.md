@@ -1,6 +1,8 @@
 # PENTOL
 PENTOL - Pentester Toolkit for Fiddler. 
 
+<img src="PENTOL.PNG" width="55%"></img>
+
 # Features
 ``CORS DETECTED`` Cross-Origin Resource Sharing
 
