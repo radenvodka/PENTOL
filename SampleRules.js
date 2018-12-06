@@ -42,6 +42,9 @@ class Handlers
 		
 	public static RulesOption("[PENTOL] ClickJacking (Frame)")
 	var m_ForceCJK: boolean = false;
+	
+	public static RulesOption("[PENTOL] Mark json respons")
+	var m_MarkJson: boolean = false;
 			
 	// ----- END:BUGRECON.OR.ID ---
 
@@ -289,6 +292,11 @@ class Handlers
 			oSession["ui-color"]="brown"; 
 		}
 		
+		if(m_MarkJson && oSession.oResponse.headers.ExistsAndContains("Content-Type", "application/json") || oSession.oResponse.headers.ExistsAndContains("Content-Type", "application/json; charset=utf-8")  ){
+			oSession["ui-comments"] = 'Json DETECTED'; //
+			oSession["ui-color"]="blue"; 
+		}
+		
 		/** ENDOF CORS **/
 		
 		
@@ -496,6 +504,9 @@ class Handlers
         }
     }
 }
+
+
+
 
 
 
