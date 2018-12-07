@@ -8,6 +8,10 @@ PENTOL - Pentester Toolkit is built as a plugin for the Fiddler HTTP debugging p
 
 ``CRLF DETECTED`` HTTP response splitting 
 
+``JSON DETECTED`` 
+
+``CSP DETECTED`` 
+
 ``Headers DETECTED (X-Frame-Options)`` 
 
 # USAGE
