@@ -45,6 +45,9 @@ class Handlers
 	
 	public static RulesOption("[PENTOL] Mark json respons")
 	var m_MarkJson: boolean = false;
+		
+	public static RulesOption("[PENTOL] CSP Secure Design Principles")
+	var m_CSP: boolean = true;
 			
 	// ----- END:BUGRECON.OR.ID ---
 
@@ -292,11 +295,15 @@ class Handlers
 			oSession["ui-color"]="brown"; 
 		}
 		
-		if(m_MarkJson && oSession.oResponse.headers.ExistsAndContains("Content-Type", "application/json") || oSession.oResponse.headers.ExistsAndContains("Content-Type", "application/json; charset=utf-8")  ){
+		if(m_MarkJson && oSession.oResponse.headers.ExistsAndContains("Content-Type", "application/json; charset=utf-8")  ){
 			oSession["ui-comments"] = 'Json DETECTED'; //
 			oSession["ui-color"]="blue"; 
 		}
-		
+		if(m_CSP && oSession.oResponse.headers['Content-Security-Policy'] == '' && oSession.oResponse.headers.ExistsAndContains("Content-Type", "text/html; charset=utf-8")  && oSession.oRequest.headers.HTTPMethod != "OPTIONS" && oSession.oRequest.headers.HTTPMethod != "CONNECT"){
+			oSession["ui-comments"] = 'CSP DETECTED'; //
+			oSession["ui-color"]="navy"; 
+		}
+		//
 		/** ENDOF CORS **/
 		
 		
@@ -504,6 +511,8 @@ class Handlers
         }
     }
 }
+
+
 
 
 
