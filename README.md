@@ -14,6 +14,18 @@ PENTOL - Pentester Toolkit is built as a plugin for the Fiddler HTTP debugging p
 
 ``Headers DETECTED (X-Frame-Options)`` 
 
+# Modif 
+
+Press Key `CTRL` + `R`  or `Rules` > `Customize Rules...`
+
+Search m_Gojek and m_Tokopedia 
+
+
+//oSession.utilDecodeResponse();
+//oSession.utilReplaceInResponse('36359','401514252112'); 
+//oSession.utilReplaceInResponse(' search text ' , 'reaplace' );
+
+
 # USAGE
 
 - Install [Fiddler2](https://www.telerik.com/download/fiddler/fiddler2)
